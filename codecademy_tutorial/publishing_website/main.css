@@ -1,0 +1,40 @@
+body {
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ width: 100%;
+}
+
+h1 {
+ font-size: 32px;
+  font-family: Palatino, 'Palatino Linotype', serif; 
+  color: rgb(46,105,163); /* Also takes hex arguments with `#` before (e.g., #2e69a3 gives the same as the selected rgb value) */
+}
+
+h2 {
+ font-size: 56px; /* Can also use the `rem` measurement. One rem is equivalent to 16px. */
+}
+
+
+.hero {
+  padding: 250px 0;
+  margin: 30px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif; /* Link to css fonts: https://cssfontstack.com/oldsites/cssfontstack/ */
+  background-image: url("https://content.codecademy.com/projects/make-a-website/lesson-2/bg.jpg");
+  background-size: cover;
+  color: #ffffff;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.hero a {
+ color: #00FFAA;
+ font-size: 1.25em;
+ text-decoration: none;
+}
+
+#footer {
+  font-size: 0.75rem;
+}

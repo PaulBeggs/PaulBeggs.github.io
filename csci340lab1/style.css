@@ -7,6 +7,7 @@ body {
 
 header {
   padding: 20px 0;
+  background-color: antiquewhite;
 }
 
 header .row,
@@ -31,10 +32,6 @@ header nav {
 header p {
   padding: 0 20px;
   margin: 0;
-}
-
-.product-picture {
-
 }
 
 .jumbotron {
@@ -79,6 +76,7 @@ section .row img {
 footer {
   padding: 20px 0;
   align-items: center;
+  background-color: antiquewhite;
   font-family: "Indie Flower"
 }
 

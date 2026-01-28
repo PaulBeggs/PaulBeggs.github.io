@@ -1,5 +1,5 @@
 body {
-  font-family: "Chewy";
+  font-family: "Chewy", serif;
   background-color: rgb(229, 205, 171);
   color: rgb(120, 154, 6);
   font-weight: 300;
@@ -19,13 +19,13 @@ footer .row {
 header h1 {
   font-weight: 700;
   margin: 0;
-  font-family: 'Indie Flower'
+  font-family: 'Indie Flower', serif;
 }
 
 header nav {
   display: flex;
   justify-content: flex-end;
-  font-family: 'Indie Flower';
+  font-family: 'Indie Flower', serif;
   font-size: 16px;
 }
 
@@ -77,7 +77,7 @@ footer {
   padding: 20px 0;
   align-items: center;
   background-color: antiquewhite;
-  font-family: "Indie Flower"
+  font-family: "Indie Flower", serif;
 }
 
 footer p {

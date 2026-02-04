@@ -1,0 +1,33 @@
+#rectangle{
+    background: gray;
+    width: 300px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+#stop{
+    background: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 20%;
+
+}
+#go{
+    background: green;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 100%;
+
+}
+#yield{
+    background: yellow;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 20%;
+}

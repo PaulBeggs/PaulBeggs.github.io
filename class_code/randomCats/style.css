@@ -1,0 +1,9 @@
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url('images/lotsodogs.webp');
+  background-size: cover;
+  color: #ffffff;
+  min-height: 400px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}

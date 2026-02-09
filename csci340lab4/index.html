@@ -3,17 +3,18 @@
   <head>
     <title>Traveling Report</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
 
-    <header class="container">
+    <header class="container-fluid">
       <div class="row"></div>
-      <h1 class="col-sm-4">Weather and Transportation Services</h1>
+      <h1 class="col-sm-12">Conway Transportation Services</h1>
     </header>
 
     <section class="jumbotron">
@@ -28,20 +29,27 @@
     <section class="container">
       <div class="row">
         <div class="col-sm-6">
-          <input type="text" id="weatherBox" placeholder="Enter Range Here">
-          <button id="submit">Submit</button>
-          <p>Output: <span id="weatherOutput"></span></p>
+          <p>Enter a starting location here:</p>
+          <input type="text" id="cityBox" placeholder="E.g., Conway, AR">
+          <button id="submitCity">Submit</button>
+          <p>Output: <span id="cityOutput"></span></p>
           
-          <input type="text" id="textBox" placeholder="Enter Range Here">
+          <p>Enter a destination city here:</p>
+          <input type="text" id="" placeholder="Enter Range Here">
           <button id="submit">Submit</button>
           <p>Output: <span id="outputArea"></span></p>
         </div>
         <div class="col-sm-6">
-          <img src=""
+          <img src="">
         </div>
       </div>
     </section>
 
+    <footer class="container">
+      <div class="row">
+        Weather and Transportation Services
+      </div>
+    </footer>
 
 
 

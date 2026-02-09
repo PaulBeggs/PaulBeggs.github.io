@@ -1,7 +1,39 @@
+footer,
+header h1 {
+    font-family: "Playwrite NZ Basic", cursive;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(202, 231, 255);
+}
+
+
+body {
+    font-family:  "Lora", serif;
+    background-color: rgb(164, 186, 207);
+}
+
 .jumbotron {
     display: flex;
     align-items: center;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cloudy_weather.jpg/1280px-Cloudy_weather.jpg?20170519223550");
     background-size: cover;
     height: 400px;
+}
+
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.playwrite-nz-basic {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }

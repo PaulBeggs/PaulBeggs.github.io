@@ -1,0 +1,7 @@
+.jumbotron {
+    display: flex;
+    align-items: center;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cloudy_weather.jpg/1280px-Cloudy_weather.jpg?20170519223550");
+    background-size: cover;
+    height: 400px;
+}

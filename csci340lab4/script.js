@@ -55,14 +55,14 @@ $(document).ready(function() {
     "profile": "car",
     
     // array of numbers (north first, then east)
-    "point": [
+    "points": [
       [
-        11.539421,
-        48.118477
+        -11.539421,
+        -48.118477
       ],
       [
-        11.559023,
-        48.12228
+        -11.559023,
+        -48.12228
       ]
     ],
   };

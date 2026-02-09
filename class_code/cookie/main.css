@@ -1,0 +1,32 @@
+h1 {
+  font-family: 'Amatic SC', courier;
+  font-size: 6em;
+  text-align: center;
+}
+
+p {
+  font-family: 'Amatic SC', courier;
+  font-size: 3em;
+  text-align: center;
+}
+
+.cookie {
+  max-width: 100%;
+  height: auto;
+}
+.center {
+    margin: auto;
+}
+
+
+.fortune {
+   min-height: 100px;
+    background-color: #FFFFFF;
+   border: 10px solid #F9F9F9;
+  padding:10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}

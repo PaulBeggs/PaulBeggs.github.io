@@ -1,8 +1,7 @@
 $(document).ready(function() {
   // Initally hide the vehicle selection div
-  $("#vehicleSelection").hide();
 
-  
+
 
   // Weather for traveling
 
@@ -53,10 +52,24 @@ $(document).ready(function() {
     var end = getCityState('#endCityBox')
     
     $.when(
-      getCoordinates(start.city, start.state),
-      getCoordinates(end.city, end.state)
+      // getCoordinates(start.city, start.state),
+      // getCoordinates(end.city, end.state)
     ).done(function(startData, endData) {
-      // console.log(startData, endData)
+      
+      // adds a label for the drop down menu 
+      var $vehicleP = $("<p>")
+      $vehicleP.text("Select your mode of transportation: ")
+
+      // adds a drop down menu that only has "Car", "Bike", or "Walking" to the vehicleSelection id
+      var $vehicleInput = $("<select id='vehicleSelect'><option value='car'>Car</option><option value='bike'>Bike</option><option value='walking'>Walking</option></select>")
+
+      // append a button next to the drop down menu to submit choice
+      var $submitVehicle = $("<button id='submitVehicle'>Submit</button>")
+
+      // add all to the vehicle selection div and show it
+      $("#vehicleSelection").append($vehicleP)
+      $("#vehicleSelection").append($vehicleInput).append($submitVehicle)
+      $("#vehicleSelection").show();
 
       var now = new Date();
       console.log(now)
@@ -67,18 +80,19 @@ $(document).ready(function() {
       var endLat = endData[0][0].lat;
       var endLon = endData[0][0].lon;
 
+      // now that we have our coordinates, and a button set up to get the appropriate vehicle, we need to query the traffic api to get the distance of the trip, and then query the weather api to get the weather for the day of the trip.
       $.when(
         
       )
 
       var weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude="+ endLat +"&longitude="+endLon+"&hourly=temperature_2m,wind_direction_120m,wind_speed_120m,precipitation,precipitation_probability&forecast_days=1&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch"
-      $.ajax({
-        url: weatherUrl,
-        dataType: 'json',
-        success: function(data) {
-          console.log(data)
-        }
-      });
+      // $.ajax({
+      //   url: weatherUrl,
+      //   dataType: 'json',
+      //   success: function(data) {
+      //     console.log(data)
+      //   }
+      // });
     });  
   });
 

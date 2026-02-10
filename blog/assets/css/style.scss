@@ -1,0 +1,24 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+body{
+  background: rgba(100, 43, 193, 0.355);
+  font-family: sans-serif
+}
+
+footer{
+  background:rgba(122, 101, 101, 0.285);
+}
+
+.site-header{
+  background:rgba(122, 101, 101, 0.285);
+}
+
+a:link{
+  text-decoration: underline;
+}

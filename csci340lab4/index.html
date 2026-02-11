@@ -30,7 +30,7 @@
       <div class="row">
         <h3>Welcome to my website!</h3>
         <p>
-          On this website, you can treat it similarly to how you would Google Maps (only, with way less functionality). To start, simply put in what two cities you would like to find calculate the routing distance between (examples are provided). After you search for your cities, you will see a drop down appear that allows you to select which mode of travel you will be taking. The website will automatically calculate the time and distance between the two locations, and if your destination city is available on WikiPedia (case sensitive), a description will appear. And that's it! Hope you enjoy. (Note: To view different options/pictures, please reload the page. Otherwise, the elements will just stack.)
+          On this website, you can treat it similarly to how you would Google Maps (only, with way less functionality). To start, simply put in what two cities you would like to find calculate the routing distance between (examples are provided). After you search for your cities, you will see a drop down appear that allows you to select which mode of travel you will be taking. The website will automatically calculate the time and distance between the two locations, and if your destination city is available on WikiPedia (case sensitive), a description will appear. And that's it! Hope you enjoy.
         </p>
       </div>
       <div class="row">
@@ -42,8 +42,12 @@
           <input type="text" id="endCityBox" placeholder="e.g., Bentonville, AR">
           <button id="submitCity">Submit</button>
           
-          <div id="vehicleSelection">
+          <div id="vehicleSelection" style="display:none;">
             <!-- this is where the drop-down menu appears -->
+          </div>
+          <div id="tripResults">
+            <div id="tripStats"></div>
+            <div id="wikiInfo"></div>
           </div>
         </div>
         <div class="col-sm-6">

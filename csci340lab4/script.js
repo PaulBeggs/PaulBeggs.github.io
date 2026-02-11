@@ -50,6 +50,8 @@ $(document).ready(function() {
     // Get start location first
     var start = getCityState('#startCityBox');
     var end = getCityState('#endCityBox')
+
+    $("#vehicleSelection").empty();
     
     $.when(
       getCoordinates(start.city, start.state),
@@ -57,8 +59,7 @@ $(document).ready(function() {
     ).done(function(startData, endData) {
       
       // adds a label for the drop down menu 
-      var $vehicleP = $("<p>")
-      $vehicleP.html("<h4 class='textBoxHeader'>Select your mode of transportation: </h4>")
+      var $vehicleP = $("<p>").html("<h4 class='textBoxHeader'>Select your mode of transportation: </h4>")
 
       // adds a drop down menu that only has "Car", "Bike", or "Walking" to the vehicleSelection id
       var $vehicleInput = $("<select id='vehicleSelect'><option value='car'>Car</option><option value='bike'>Bike</option><option value='foot'>Walking</option></select>")
@@ -85,15 +86,20 @@ $(document).ready(function() {
       // TODO: query the weather api to get the weather for the day of the trip.
       // INSTEAD: switch to getting images and the first picture from the wikipedia page for the city instead of the weather at this point.
       $("#submitVehicle").click(function() {
-      var vehicle = $("#vehicleSelect").val();
-      var vPic = $("<img>")
-      vPic.attr("src", travelingPictures[vehicle])
+        $("#vehicleSpan").empty();
+        $("#tripStats").empty();
+        $("#wikiInfo").empty();
+
+        var vehicle = $("#vehicleSelect").val();
+
+        $("<img>")
+          .attr("src", travelingPictures[vehicle])
           .addClass("vehiclePic")    
           .appendTo("#vehicleSpan")
           
     
-      $.when(getTravelInfo(startLat, startLon, endLat, endLon, vehicle)).done(function(travelData) {
-          console.log(travelData);
+        $.when(getTravelInfo(startLat, startLon, endLat, endLon, vehicle)).done(function(travelData) {
+          $("#vehicleSelection p.result").remove();
           
           // get raw distance and time from travelData
           var rawMs = travelData.paths[0].time;
@@ -108,15 +114,14 @@ $(document).ready(function() {
           var minutes = totalMinutes % 60;
 
           // get the trip distance and time, and give to the user
-          var $timeP = $("<p>")
-          $timeP.html("<strong>Time to travel: </strong>" + hours + " hours and " + minutes + " minutes.")
-          $("#vehicleSelection").append($timeP)
-          var $distanceP = $("<p>")
-          $distanceP.html("<strong>Distance to travel: </strong>" + distanceTravel + " miles.")
-          $("#vehicleSelection").append($distanceP)
+          var statsHtml = `
+            <p><strong>Time to travel:</strong> ${hours} hours and ${minutes} minutes.</p>
+            <p><strong>Distance to travel:</strong> ${distanceTravel} miles.</p>
+          `;
+          $("#tripStats").html(statsHtml);
 
           // get a formatted title to send off to wikipedia for proper search
-          formattedTitle = end.city + ", " + abbrToState[end.state];
+          var formattedTitle = end.city + ", " + abbrToState[end.state];
 
           var wikiUrl = "https://en.wikipedia.org/w/api.php";
           var wikiParams = {
@@ -141,11 +146,7 @@ $(document).ready(function() {
               if (page.extract) {
                 var firstParagraph = page.extract.split("\n")[0];
                 var formattedParagraph = "<h3>About " + formattedTitle + "</h3><p>" + firstParagraph + "</p>"
-                if (vehicle !== "foot") {
-                  $("#allElse").html(formattedParagraph);
-                } else {
-                  $("#vehicleSelection").append(formattedParagraph);
-                }
+                $("#wikiInfo").html(formattedParagraph)
               }
 
             },

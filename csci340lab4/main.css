@@ -1,9 +1,7 @@
-footer,
-header h1 {
-    font-family: "Playwrite NZ Basic", cursive;
-}
 
+footer,
 header {
+    font-family: "Playwrite NZ Basic", cursive;
     display: flex;
     align-items: center;
     padding: 5px;
@@ -13,6 +11,7 @@ header {
 
 body {
     font-family:  "Lora", serif;
+    font-size: 1.5em;
     background-color: rgb(164, 186, 207);
 }
 
@@ -22,6 +21,20 @@ body {
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cloudy_weather.jpg/1280px-Cloudy_weather.jpg?20170519223550");
     background-size: cover;
     height: 400px;
+}
+
+.jumbotron h2 {
+    color: black;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.jumbotron h3 {
+    color: black;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 10px auto;
 }
 
 .lora {
@@ -36,4 +49,24 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+}
+
+#startingPic {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.textBoxHeader {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.vehiclePic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }

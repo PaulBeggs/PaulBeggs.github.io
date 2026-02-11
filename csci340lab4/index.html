@@ -14,46 +14,50 @@
 
     <header class="container-fluid">
       <div class="row"></div>
-      <h1 class="col-sm-12">Conway Transportation Services</h1>
+      <h1 class="col-sm-12">EZ-Trip</h1>
     </header>
 
     <section class="jumbotron">
       <div class="container">
         <div class="row text-center">
-          <h2>jumbotron text here!</h2>
-          <h3>subjumbotron text next!</h3>
+          <h2>Get Instant Traveling Information</h2>
+          <h3>Available for Any US City! </h3>
         </div>
       </div>
     </section>
 
     <section class="container">
       <div class="row">
+        <h3>Welcome to my website!</h3>
+        <p>
+          On this website, you can treat it similarly to how you would Google Maps (only, with way less functionality). To start, simply put in what two cities you would like to find calculate the routing distance between (examples are provided). After you search for your cities, you will see a drop down appear that allows you to select which mode of travel you will be taking. The website will automatically calculate the time and distance between the two locations, and if your destination city is available on WikiPedia (case sensitive), a description will appear. And that's it! Hope you enjoy. (Note: To view different options/pictures, please reload the page. Otherwise, the elements will just stack.)
+        </p>
+      </div>
+      <div class="row">
         <div class="col-sm-6">
-          <p>Enter a starting location here:</p>
+          <h4 class="textBoxHeader">Enter a starting location here:</h4>
           <input type="text" id="startCityBox" placeholder="e.g., Conway, AR">
           
-          <p>Enter a destination city here:</p>
+          <h4 class="textBoxHeader">Enter a destination city here:</h4>
           <input type="text" id="endCityBox" placeholder="e.g., Bentonville, AR">
           <button id="submitCity">Submit</button>
-          <p>Output: <span id="cityOutput"></span></p>
-
-          <!-- initally hidden (only shows after ) -->
+          
           <div id="vehicleSelection">
-            <!-- <p>Enter a destination city here:</p>
-            <input type="text" id="endCityBox" placeholder="e.g., Bentonville, AR">
-            <button id="submitCity">Submit</button>
-            <p>Output: <span id="cityOutput"></span></p> -->
+            <!-- this is where the drop-down menu appears -->
           </div>
         </div>
         <div class="col-sm-6">
-          <img src="">
+          <span id="vehicleSpan"></span>
         </div>
+      </div>
+      <div class="row">
+        <p id="allElse"></p>
       </div>
     </section>
 
-    <footer class="container">
+    <footer class="container-fluid">
       <div class="row">
-        Weather and Transportation Services
+        <h3>EZ-Trip</h3>
       </div>
     </footer>
 
